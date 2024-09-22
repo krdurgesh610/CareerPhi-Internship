@@ -6,11 +6,10 @@ function updateBalance(){
 }
 
 function deposite(){
-    console.log("Clicked");
     
     const depositAmount = parseFloat(document.getElementById("deposit").value);
     
-    if(depositAmount>0){
+    if(!isNaN(depositAmount) && depositAmount>0){
         balance = (balance + depositAmount);
         updateBalance();
         document.getElementById("deposit").value = "";

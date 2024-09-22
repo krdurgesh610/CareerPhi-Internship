@@ -24,15 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderInvestments() {
         
         investmentTable.innerHTML = '';
-        
-        
+
         investments.forEach((investment, index) => {
-            
             const percentageChange = ((investment.currentValue - investment.amountInvested) / investment.amountInvested * 100).toFixed(2);
             
-            
             const row = document.createElement('tr');
-            
             
             row.innerHTML = `
                 <td>${investment.assetName}</td>  <!-- Asset name -->
@@ -72,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 labels: labels, 
                 datasets: [{
                     data: data,  
-                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+                    backgroundColor: ['red', 'yellow', 'blue', 'aqua', 'green']
                 }]
             },
             options: {
